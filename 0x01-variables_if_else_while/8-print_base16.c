@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - alphabet lister
+ * main - base 16 digits lister
  *
  * Return: Always 0 (success)
  */
