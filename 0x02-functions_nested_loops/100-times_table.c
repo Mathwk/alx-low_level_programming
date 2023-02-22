@@ -22,13 +22,14 @@ void print_times_table(int n)
 					_putchar('0' + (i * j) / 100);
 					_putchar('0' + ((i * j) % 100 ) /10);
 					_putchar('0' + ((i + j) % 100) % 10);
+				}
 				else if (i * j > 9 && i * j < 100)
 				{
 					_putchar(' ');
 					_putchar('0' + (i * j) / 10);
 					_putchar('0' + (i * j) % 10);
 				}
-				else
+				else if
 				{
 					if (j == 0)
 						_putchar('0' + (i * j));
