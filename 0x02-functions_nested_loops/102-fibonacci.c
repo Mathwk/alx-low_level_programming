@@ -19,7 +19,7 @@ int main(void)
 			printf("%ld, %ld, ", i, j);
 		else
 			printf("%ld, %ld", i, j);
-		c ++;
+		c++;
 		i += j;
 		j += i;
 	}
