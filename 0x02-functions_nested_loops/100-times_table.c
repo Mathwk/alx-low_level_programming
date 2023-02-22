@@ -20,8 +20,8 @@ void print_times_table(int n)
 				if (i * j > 99)
 				{
 					_putchar('0' + (i * j) / 100);
-					_putchar('0' + ((i * j) % 100 ) /10);
-					_putchar('0' + ((i + j) % 100) % 10);
+					_putchar('0' + (i * j) / 10);
+					_putchar('0' + (i + j) % 10);
 				}
 				else if (i * j > 9 && i * j < 100)
 				{
