@@ -15,8 +15,6 @@ int main(void)
 	{
 		if (n % 3 == 0 || n % 5 == 0)
 			sum += n;
-		else if (n % 15 == 0)
-			sum -= n;
 	}
 	return (0);
 }
