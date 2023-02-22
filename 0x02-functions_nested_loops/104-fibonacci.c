@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	unsigned long int i, i1, i2;
-	unsigned long int j, j1, j2;
+	unsigned long int i, i1, i2, a;
+	unsigned long int j, j1, j2, b;
 	int c;
 
 	i = 1;
@@ -31,9 +31,6 @@ int main(void)
 		else
 			printf("%lu  %lu, %lu  %lu", i1, i2, j1, j2);
 		c++;
-		int a;
-		int b;
-
  		a = i2 + j2;
 
 		i2 = (i2 + j2) % 10000000000;
