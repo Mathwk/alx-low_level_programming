@@ -1,9 +1,7 @@
 #include "main.h"
 /**
  * print_times_table -  times table
- *
  *@n: input num
- *
  * Return: Null
  */
 void print_times_table(int n)
@@ -21,7 +19,7 @@ void print_times_table(int n)
 				{
 					_putchar('0' + (i * j) / 100);
 					_putchar('0' + ((i * j) % 100) / 10);
-					_putchar('0' + (i + j) % 10);
+					_putchar('0' + (i * j) % 10);
 				}
 				else if (i * j > 9 && i * j < 100)
 				{
@@ -31,14 +29,12 @@ void print_times_table(int n)
 				}
 				else
 				{
-					if (j == 0)
-						_putchar('0' + (i * j));
-					else
+					if (j != 0)
 					{
 						_putchar(' ');
 						_putchar(' ');
-						_putchar('0' + (i * j));
 					}
+					_putchar('0' + (i * j));
 				}
 				if (j < n)
 				{
