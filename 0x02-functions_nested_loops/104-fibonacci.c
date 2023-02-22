@@ -6,22 +6,33 @@
  */
 int main(void)
 {
-	double i;
-	double j;
+	unsigned long int i, i1, i2;
+	unsigned long int j, j1, j2;
 	int c;
 
 	i = 1;
 	j = 2;
 
-	for (c = 0; c < 49;)
+	for (c = 0; c < 45;)
 	{
-		if (c < 48)
-			printf("%.0f, %.0f, ", i, j);
-		else
-			printf("%.0f, %.0f", i, j);
+		printf("%lu, %lu, ", i, j);
 		c++;
 		i += j;
 		j += i;
+	}
+		i1 = i / 10000000000;
+		i2 = i % 10000000000;
+		j1 = j / 10000000000;
+		j2 = j % 10000000000;
+	for (c = 45; c < 49;)
+	{
+		if (c < 48)
+			printf("%lu %lu, %lu %lu, ", i1, i2, j1, j2);
+		else
+			printf("%lu %lu, %lu %lu", i1, i2, j1, j2);
+		c++;
+		i2 += j2;
+		j2 += i2;
 	}
 	printf("\n");
 	return (0);
