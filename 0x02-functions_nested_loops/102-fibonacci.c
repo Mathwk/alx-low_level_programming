@@ -17,7 +17,7 @@ int main(void)
 	{
 		if (c < 24)
 			printf("%ld, %ld,  ", i, j);
-		else
+		else if (c == 24)
 			printf("%ld, %ld", i, j);
 		c ++;
 		i += j;
