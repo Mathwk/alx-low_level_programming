@@ -15,11 +15,11 @@ void jack_bauer(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if ((i < 2) || (i = 2 && j < 4))
+			for (k = 0; k < 6; k++)
 			{
-				for (k = 0; k < 6; k++)
+				for (l = 0; l < 10; l++)
 				{
-					for (l = 0; l < 10; l++)
+					if ((i < 2) || (i < 3 && j < 4))
 					{
 						_putchar('0' + i);
 						_putchar('0' + j);
