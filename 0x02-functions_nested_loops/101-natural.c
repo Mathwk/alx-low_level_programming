@@ -18,4 +18,5 @@ int main(void)
 		else if (n % 15 == 0)
 			sum -= n;
 	}
+	return (0);
 }
