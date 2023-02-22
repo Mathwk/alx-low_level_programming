@@ -16,8 +16,8 @@ int main(void)
 	for (c = 0; c < 25;)
 	{
 		if (c < 24)
-			printf("%ld, %ld,  ", i, j);
-		else if (c == 24)
+			printf("%ld, %ld, ", i, j);
+		else
 			printf("%ld, %ld", i, j);
 		c ++;
 		i += j;
