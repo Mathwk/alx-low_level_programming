@@ -27,9 +27,9 @@ int main(void)
 	for (c = 45; c < 49;)
 	{
 		if (c < 48)
-			printf("%lu %lu, %lu %lu, ", i1, i2, j1, j2);
+			printf("%lu%lu, %lu%lu, ", i1, i2, j1, j2);
 		else
-			printf("%lu %lu, %lu %lu", i1, i2, j1, j2);
+			printf("%lu%lu, %lu%lu", i1, i2, j1, j2);
 		c++;
 		i2 += j2;
 		j2 += i2;
