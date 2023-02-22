@@ -13,7 +13,7 @@ int main(void)
 	i = 1;
 	j = 2;
 
-	for (c = 0; c < 46;)
+	for (c = 0; c < 45;)
 	{
 		printf("%lu, %lu, ", i, j);
 		c++;
@@ -24,7 +24,7 @@ int main(void)
 		i2 = i % 10000000000;
 		j1 = j / 10000000000;
 		j2 = j % 10000000000;
-	for (c = 46; c < 49;)
+	for (c = 45; c < 49;)
 	{
 		if (c < 48)
 			printf("%lu  %lu, %lu  %lu, ", i1, i2, j1, j2);
