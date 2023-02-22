@@ -13,12 +13,13 @@ int main(void)
 	i = 1;
 	j = 2;
 
-	for (c = 0; c < 50;)
+	for (c = 0; c < 25;)
 	{
-		printf("%ld, ", i);
-		c++;
-		printf("%ld, ", j);
-		c++;
+		if (c < 24)
+			printf("%ld, %ld,  ", i, j);
+		else
+			printf("%ld, %ld", i, j);
+		c ++;
 		i += j;
 		j += i;
 	}
