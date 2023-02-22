@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	int i;
-	int j;
+	long int i;
+	long int j;
 	int c;
 
 	i = 1;
@@ -15,12 +15,12 @@ int main(void)
 
 	for (c = 0; c < 50;)
 	{
-			printf("%d, ", i);
-			c++;
-			printf("%d, ", j);
-			c++;
-			i += j;
-			j += i;
+		printf("%d, ", i);
+		c++;
+		printf("%d, ", j);
+		c++;
+		i += j;
+		j += i;
 	}
 	printf("\n");
 	return (0);
