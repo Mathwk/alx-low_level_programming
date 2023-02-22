@@ -15,9 +15,9 @@ int main(void)
 
 	for (c = 0; c < 50;)
 	{
-		printf("%d, ", i);
+		printf("%ld, ", i);
 		c++;
-		printf("%d, ", j);
+		printf("%ld, ", j);
 		c++;
 		i += j;
 		j += i;
