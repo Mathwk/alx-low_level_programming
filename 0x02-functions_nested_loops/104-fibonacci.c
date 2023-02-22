@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
  * main - the first 50 fibonacci that start with 1 and 2
- *
  * Return: Always 0
  */
 int main(void)
@@ -27,12 +26,11 @@ int main(void)
 	for (c = 45; c < 49;)
 	{
 		if (c < 48)
-			printf("%lu  %lu, %lu  %lu, ", i1, i2, j1, j2);
+			printf("%lu%lu, %lu%lu, ", i1, i2, j1, j2);
 		else
-			printf("%lu  %lu, %lu  %lu", i1, i2, j1, j2);
+			printf("%lu%lu, %lu%lu", i1, i2, j1, j2);
 		c++;
- 		a = i2 + j2;
-
+		a = i2 + j2;
 		i2 = (i2 + j2) % 10000000000;
 		b = j2 + i2;
 		j2 = (i2 + j2) % 10000000000;
