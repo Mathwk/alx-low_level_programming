@@ -4,7 +4,7 @@
  *
  * @n: input number
  *
- * Return: Always 0
+ * Return: Last digit
  */
 int print_last_digit(int n)
 {
@@ -12,9 +12,10 @@ int print_last_digit(int n)
 
 	if (n < 0)
 		n = -n;
-	a = n % 10;
+	a = (n - 1) % 10;
+	_putchar('0' + n);
 
 	_putchar('0' + a);
 
-	return (a);
+	return (a + 1);
 }
