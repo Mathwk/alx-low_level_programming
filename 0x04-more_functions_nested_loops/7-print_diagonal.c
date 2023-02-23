@@ -10,5 +10,6 @@ void print_line(int n)
 	{
 		_putchar('\');
 		_putchar('\n');
+	}
 	_putchar('\n');
 }
