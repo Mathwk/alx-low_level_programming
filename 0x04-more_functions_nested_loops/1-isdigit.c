@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isdigit - checks fort 
+ * _isdigit - checks fort
  * @c: input
  * Return: 1 for a digit and 0 otherwise
  */
