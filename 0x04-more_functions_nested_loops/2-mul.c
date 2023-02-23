@@ -20,8 +20,8 @@ int mul(int a, int b)
 	}
 	for (; c >= 0; c--)
 	{
-		i = r / 10 ** c;
-		r %= 10 ** c;
+		i = r / 10 ^ c;
+		r %= 10 ^ c;
 		_putchar('0' + i);
 	}
 	return (0);
