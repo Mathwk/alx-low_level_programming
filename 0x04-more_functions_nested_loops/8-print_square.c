@@ -1,21 +1,19 @@
 #include "main.h"
 /**
- * more_numbers - print numbers from 0 to 14, 10 times
- *
+ * print_square - print square of #
+ *@size: dimension of the square
  * Return: Always 0
  */
-void more_numbers(void)
+void print_square(int size)
 {
-	int i, j;
+	int i;
 
-	for (i = 0; i < 10; i++)
+	if (size == 0)
+		_putchar('\n');
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j <= 14; j++)
-		{
-			if (j > 9)
-				_putchar('1');
-			_putchar('0' + j % 10);
-		}
+		for (j = 0; j < size; j++)
+			_putchar('#');
 		_putchar('\n');
 	}
 }
