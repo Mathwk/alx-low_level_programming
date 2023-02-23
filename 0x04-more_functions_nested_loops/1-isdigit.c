@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isupper - checks for upper case letters
+ * _isdigit - checks for upper case letters
  * @c: letter input
  * Return: 1 for upper case and 0 otherwise
  */
