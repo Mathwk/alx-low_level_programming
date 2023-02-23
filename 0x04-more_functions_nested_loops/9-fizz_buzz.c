@@ -12,20 +12,23 @@ int main(void)
 	{
 		if (i % 15 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 			continue;
 		}
 		if (i % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 			continue;
 		}
 		if (i % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 			continue;
 		}
-		printf("%d ", i);
+		printf("%d", i);
+		if (i == 100)
+			break;
+		printf(" ");
 	}
 	printf("\n");
 	return (0);
