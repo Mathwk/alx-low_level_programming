@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_line - draw a line
+ * print_diagonal - draw a diagonal line
  *@n: length of line
  * Return: Always 0
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
 	for (; n > 0; n--)
 	{
