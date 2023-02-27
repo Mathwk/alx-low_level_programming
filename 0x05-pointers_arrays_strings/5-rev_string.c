@@ -15,9 +15,9 @@ void rev_string(char *s)
 		i++;
 	c = i;
 
-	for (j = 0; j < i; j++)
+	for (j = 0; j < c; j++)
 	{
-		s[j] =(r[i - 1]); 
-		c--;
+		s[j] =(r[c - 1]); 
+		i--;
 	}
 }
