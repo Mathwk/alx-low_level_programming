@@ -10,13 +10,13 @@ int _atoi(char *s)
 
 	j = 0;
 
-	for (i = 0; s[i] != [0 - 9])
+	for (i = 0; s[i] != [[:digit:]])
 	{
 		if (s[i] == '-')
 			j++;
 		i++;
 	}
-	for (a = i; s[i] == [0 - 9];)
+	for (a = i; s[i] == [[:digit:]];)
 		a++;
 	a = a - 1;
 	strncpy(r1 + i, s, a);
