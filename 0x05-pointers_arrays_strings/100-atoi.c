@@ -10,13 +10,13 @@ int _atoi(char *s)
 
 	j = 0;
 
-	for (i = 0; s[i] != '\d')
+	for (i = 0; s[i] != [0 - 9])
 	{
 		if (s[i] == '-')
 			j++;
 		i++;
 	}
-	for (a = i; s[i] == '\d';)
+	for (a = i; s[i] == [0 - 9];)
 		a++;
 	a = a - 1;
 	strncpy(r1 + i, s, a);
