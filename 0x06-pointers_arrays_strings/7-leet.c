@@ -13,15 +13,15 @@ char *leet(char *s)
 	for (; i > 0; i--)
 	{
 		if (s[i - 1] == 'a' || s[i - 1] == 'A')
-			s[i - 1] = 4;
+			s[i - 1] = '4';
 		else if (s[i - 1] == 'e' || s[i - 1] == 'E')
-			s[i - 1] = 3;
+			s[i - 1] = '3';
 		else if (s[i - 1] == 'o' || s[i - 1] == 'O')
-			s[i - 1] = 0;
+			s[i - 1] = '0';
 		else if (s[i - 1] == 't' || s[i - 1] == 'T')
-			s[i - 1] = 7;
+			s[i - 1] = '7';
 		else if (s[i - 1] == 'l' || s[i - 1] == 'L')
-			s[i - 1] = 4;
+			s[i - 1] = '1';
 	}
 	return (s);
 }
