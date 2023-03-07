@@ -1,5 +1,24 @@
 #include "main.h"
 /**
+ * _comp - compates string
+ * @a: string one
+ * @b: string two
+ * @i: number of character to compare
+ * Return: difference
+ */
+int _comp(char *a, char *b, int i)
+{
+	int c;
+
+	for (c = 0; c <= i && *a == *b && *a != '\0' && *b != '\0'; c++)
+	{
+		a++;
+		b++;
+	}
+	return (i - c);
+}
+
+/**
  * _strstr - locates a substring
  * @haystack: the string to be analyzed
  * @needle: the string to be searched
@@ -7,30 +26,14 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j, a, b, c, d;
+	unsigned int i;
 
-	for (i = 0; haystack[i] != '\0';)
+	for (i = 0; needle[i] != '\0';)
 		i++;
-	for (j = 0; needle[j] != '\0';)
-		j++;
-	for (b = 0; b <= i - j;)
+	for (; *haystack != '\0'; haystack++)
 	{
-		d = b;
-		c = 0;
-		a = 0;
-		for (; b <= i;)
-		{
-			if (needle[a] == haystack[b])
-			{
-				c++;
-				if (c == j)
-					return (haystack + b - a);
-				a++, b++;
-				continue;
-			}
-				b = d + 1;
-				break;
-		}
+		if (_comp(haystack, needle, i) == 0)
+			return (haystack);
 	}
 	return ('\0');
 }
