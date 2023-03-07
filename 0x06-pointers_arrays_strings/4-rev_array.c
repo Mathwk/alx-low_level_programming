@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * reverse_array - reversing the array
  * @a: an array of integers
@@ -15,8 +16,8 @@ void reverse_array(int *a, int n)
 	{
 		if (i != n)
 		{
-			_putchar(',');
-			_putchar(' ');
+			putchar(',');
+			putchar(' ');
 		}
 		s = a[i - 1];
 		for (; s / 10 > 0;)
@@ -27,7 +28,7 @@ void reverse_array(int *a, int n)
 		s = a[i - 1];
 		for (; j >= 1; )
 		{
-			_putchar('0' + s / j);
+			putchar('0' + s / j);
 			s %= j;
 			if (j < 10)
 				break;
@@ -35,5 +36,5 @@ void reverse_array(int *a, int n)
 		}
 		i--;
 	}
-	_putchar('\n');
+	putchar('\n');
 }
