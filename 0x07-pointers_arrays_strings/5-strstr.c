@@ -23,7 +23,7 @@ char *_strstr(char *haystack, char *needle)
 			if (needle[a] == haystack[b])
 			{
 				c++;
-				if (needle[a] == '\0')
+				if (c == j)
 					return (haystack + b - a);
 				a++, b++;
 				continue;
