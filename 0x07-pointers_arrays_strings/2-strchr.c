@@ -13,6 +13,6 @@ char *_strchr(char *s, char c)
 		i++;
 	j = i;
 	for (; s[i]; i++)
-		s[i - j] = s[i]
+		s[i - j] = s[i];
 	return (s);
 }
