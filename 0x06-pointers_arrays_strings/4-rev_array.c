@@ -15,8 +15,8 @@ void reverse_array(int *a, int n)
 	{
 		if (i != n)
 		{
-			putchar(',');
-			putchar(' ');
+			_putchar(',');
+			_putchar(' ');
 		}
 		s = a[i - 1];
 		for (; s / 10 > 0;)
@@ -27,7 +27,7 @@ void reverse_array(int *a, int n)
 		s = a[i - 1];
 		for (; j >= 1; )
 		{
-			putchar('0' + s / j);
+			_putchar('0' + s / j);
 			s %= j;
 			if (j < 10)
 				break;
@@ -35,5 +35,5 @@ void reverse_array(int *a, int n)
 		}
 		i--;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
