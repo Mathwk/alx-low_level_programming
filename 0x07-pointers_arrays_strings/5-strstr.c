@@ -23,16 +23,13 @@ char *_strstr(char *haystack, char *needle)
 			if (needle[a] == haystack[b])
 			{
 				c++;
-				if (c == j)
+				if (needle[a] == '\0')
 					return (haystack + b - a);
 				a++, b++;
 				continue;
 			}
-			else
-			{
 				b = d + 1;
 				break;
-			}
 		}
 	}
 	return ('\0');
