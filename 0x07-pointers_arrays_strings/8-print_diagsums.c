@@ -9,22 +9,13 @@
 void print_diagsums(int *a, int size)
 {
 	unsigned int s1, s2;
-	int b[size][size];
 	int i, j, n, c;
 
-	for (i = 0; i < size; i++)
-		for (j = 0; j < size; j++)
-			b[i][j] = a[i * size + j];
-
 	s1 = 0, s2 = 0;
-	c = size;
-	for (n = 0; n < size;)
+	for (i = 0; i < size; i++)
 	{
-		s1 += b[n][n];
-		s2 += b[n][c - 1];
-
-		n++;
-		c--;
+		s1 += a[i * (size + 1)];
+		s2 += a[(i + 1) * (size - 1)];
 	}
 	printf("%d, %d\n", s1, s2);
 }
