@@ -9,7 +9,7 @@
 void print_diagsums(int *a, int size)
 {
 	unsigned int s1, s2;
-	int i, j, n, c;
+	int i;
 
 	s1 = 0, s2 = 0;
 	for (i = 0; i < size; i++)
