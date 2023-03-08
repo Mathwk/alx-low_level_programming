@@ -5,17 +5,13 @@
  * @a: square root
  * Return: result
  */
-void print_sqrt(int a, int n)
+int print_sqrt(int a, int n)
 {
-	if (a * a < n)
-	{
-		a++;
-		print_sqrt(a, n);
-	}
-	else if (a * a == n)
+	if (a * a == n)
 		return (a);
-	else
+	else if (a * a > n)
 		return (-1);
+	return (print_sqrt(a + 1, n));
 }
 /**
  * _sqrt_recursion - square root of natual number
