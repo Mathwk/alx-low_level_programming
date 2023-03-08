@@ -9,7 +9,7 @@ int pr_num(int a, int n)
 {
 	if (a == n)
 		return (1);
-	else if (n % a == 0 || n < 0)
+	else if (n % a == 0 || n < 2)
 		return (0);
 	return (pr_num(a + 1, n));
 }
