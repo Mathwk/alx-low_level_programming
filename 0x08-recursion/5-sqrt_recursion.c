@@ -14,8 +14,7 @@ int print_sqrt(int a, int n)
 		a++;
 		print_sqrt(a, n);
 	}
-	else
-		return (-1);
+	return (-1);
 }
 /**
  * _sqrt_recursion - square root of natual number
