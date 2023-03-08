@@ -5,7 +5,7 @@
  * @a: square root
  * Return: result
  */
-int print_sqrt(int a, int n)
+void print_sqrt(int a, int n)
 {
 	if (a * a < n)
 	{
@@ -16,7 +16,6 @@ int print_sqrt(int a, int n)
 		return (a);
 	else
 		return (-1);
-	return;
 }
 /**
  * _sqrt_recursion - square root of natual number
