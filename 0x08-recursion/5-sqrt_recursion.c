@@ -7,14 +7,17 @@
  */
 int print_sqrt(int a, int n)
 {
-	if (a * a == n)
-		return (a);
-	else if (a * a < n)
+	int c;
+
+	if (a * a < n)
 	{
 		a++;
 		print_sqrt(a, n);
 	}
-	return (-1);
+	else if (a * a == n)
+		return (a);
+	else
+		return (-1);
 }
 /**
  * _sqrt_recursion - square root of natual number
