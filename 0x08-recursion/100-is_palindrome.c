@@ -14,8 +14,10 @@ int sym_check(char *s, int a, int n)
 	{
 		if (s[a] == s[n])
 			return (1);
+		else
+			return (0);
 	}
-	else if (n > a)
+	else if (n > a + 1)
 	{
 		if (s[a] != s[n])
 			return (0);
