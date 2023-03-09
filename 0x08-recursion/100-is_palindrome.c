@@ -10,12 +10,16 @@ int sym_check(char *s, int a, int n)
 {
 	if (n == a)
 		return (1);
-	else if (n == (a + 1))
+	else if (n == a + 1)
+	{
 		if (s[a] == s[n])
 			return (1);
-		else if (n > a)
-			if (s[a] != s[n])
-				return (0);
+	}
+	else if (n > a)
+	{
+		if (s[a] != s[n])
+			return (0);
+	}
 	return (sym_check(s, a + 1, n - 1));
 }
 
