@@ -10,7 +10,7 @@ int sym_check(char *s, int a, int n)
 {
 	if (n == a)
 		return (1);
-	else if (n == a + 1)
+	else if (n == (a + 1))
 		if (s[a] == s[n])
 			return (1);
 		else if (n > a)
