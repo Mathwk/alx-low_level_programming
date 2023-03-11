@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include <string.h>
 /**
  * main - prints its name
  * @argc: argument count
@@ -10,22 +10,24 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	unsigned int sum;
+	unsigned int j, sum;
+	char *s;
 
 	sum = 0;
 	if (argc > 0)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isdigit(*argv[i]) && atoi(argv[i]) >= 0)
+			s = argv[i];
+			for (j = 0; j < strlen(s); j++)
 			{
-				sum += atoi(argv[i]);
+				if (s[j] < '0' || s[j] > '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+			sum += atoi(argv[i]);
 		}
 		printf("%d\n", sum);
 	}
