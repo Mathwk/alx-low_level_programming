@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * create_array - replace initial and create an array
  * @size: base string to be edited
