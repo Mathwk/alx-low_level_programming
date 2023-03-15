@@ -8,12 +8,14 @@
  */
 char *argstostr(int ac, char **av)
 {
-	char *s;
+	char **s;
 	int a, b;
 
 	if (ac == 0 || av == NULL)
 		return ('\0');
 	s = malloc(sizeof(char *));
+	if (s == Null)
+		return ('\0');
 	for (a = 0; a < ac; a++)
 	{
 		s[a] = malloc(sizeof(char) * ac);
