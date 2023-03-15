@@ -33,5 +33,5 @@ char *argstostr(int ac, char **av)
 		for (a = 0; a < ac; a++)
 			s[b][a] = av[a];
 	}
-	return (s);
+	return (*s);
 }
