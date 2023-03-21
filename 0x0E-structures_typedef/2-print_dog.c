@@ -1,14 +1,14 @@
 #include "dog.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * print_dog - print content of struct
  * @d: struct to be printed
- * Return: NULL
  */
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
-		return (NULL);
+		return;
 	if (d->name == NULL)
 		printf("Name: (nil)\n");
 	else
