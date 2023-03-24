@@ -8,7 +8,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j;
+	int i = 0, j, k = 0;
 	char *s;
 	va_list ap;
 	const char c[] = "cifs";
@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (c[j])
 		{
-			if (format[i] == c[j] && i != 0)
+			if (format[i] == c[j] && k != 0)
 			{
 				printf(", ");
 				break;
@@ -28,16 +28,16 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(ap, int));
+				printf("%c", va_arg(ap, int)), k = 1;
 				break;
 			case 'i':
-				printf("%d", va_arg(ap, int));
+				printf("%d", va_arg(ap, int)) k = 1;
 				break;
 			case 'f':
-				printf("%f", va_arg(ap, double));
+				printf("%f", va_arg(ap, double)), k = 1;
 				break;
 			case 's':
-				s = va_arg(ap, char *);
+				s = va_arg(ap, char *), k = 1;
 				if (s != NULL)
 				{
 					printf("%s", s);
