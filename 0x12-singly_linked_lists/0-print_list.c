@@ -1,5 +1,16 @@
 #include "lists.h"
 /**
+ * _putnum - prints numbers
+ * @n: number input
+ * Return: nothing
+ */
+void _putnum(int n)
+{
+	if (n / 10 != 0)
+		_putnum(n / 10);
+	_putchar(n % 10 + '0');
+}
+/**
  * print_list - print content of linked list
  * @h: linked list input
  * Return: number node
@@ -14,7 +25,7 @@ size_t print_list(const list_t *h)
 		if (h->str == NULL)
 			_putchar('0');
 		else
-			_putchar(h->len + '0');
+			_putnum(h->len);
 		_putchar(']');
 		_putchar(' ');
 		if (h->str == NULL)
