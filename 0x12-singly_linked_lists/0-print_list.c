@@ -10,15 +10,31 @@ size_t print_list(const list_t *h)
 
 	while (h != NULL)
 	{
-		_putchar('[');
-		_putchar(h.len);
-		_putchar(']');
-		_putchar(' ');
-		for (i = 0; h.str[i]; i++)
-			_putchar(h.str[i]);
-		_putchar('\n');
 		h = h.next;
 		count++;
+		_putchar('[');
+		if (h.str == NULL)
+			_putchar('0');
+		else
+			_putchar(h.len);
+		_putchar(']');
+		_putchar(' ');
+		if (h.str == NULL)
+		{
+			_putchar('(');
+			_putchar('n');
+			_putchar('i');
+			_putchar('l');
+			_putchar(')');
+			_putchar('\n');
+			break;
+		}
+		else
+		{
+			for (i = 0; h.str[i]; i++)
+				_putchar(h.str[i]);
+		}
+		_putchar('\n');
 	}
 	return (count);
 }
