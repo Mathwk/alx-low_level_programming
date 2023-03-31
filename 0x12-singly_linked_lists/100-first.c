@@ -1,5 +1,5 @@
 #include <stdio.h>
-void __attribute__((constructor)) _printf();
+void __attribute__((constructor)) _printf(void);
 /**
  * _printf - prints before main function
  */
