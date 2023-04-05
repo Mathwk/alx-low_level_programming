@@ -9,6 +9,8 @@ int pop_listint(listint_t **head)
 	int del_node;
 	listint_t *temp, *next;
 
+	if (*head == NULL)
+		return (0);
 	temp = *head;
 	del_node = temp->n;
 	next = temp->next;
