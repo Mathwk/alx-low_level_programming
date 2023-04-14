@@ -37,13 +37,13 @@ int main(int argc, char *argv[])
 	cl_f = close(op_f);
 	if (cl_f == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", op_f);
+		dprintf(2, "Error: Can't close fd %s\n", argv[1]);
 		exit(100);
 	}
 	cl_t = close(op_t);
 	if (cl_t == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", op_t);
+		dprintf(2, "Error: Can't close fd %s\n", argv[2]);
 		exit(100);
 	}
 	return (0);
