@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	char *buffer = malloc(1024);
 
 	if (argc != 3)
-		err97;
+		err97();
 	if (buffer == NULL)
 		err99(argv[2]);
 	op_f = open(argv[1], O_RDONLY);
@@ -50,8 +50,7 @@ void err97(void)
  */
 void err98(char *fl)
 {
-	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-	free(buffer);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fl);
 	exit(98);
 }
 /**
@@ -60,8 +59,7 @@ void err98(char *fl)
  */
 void err99(char *fl)
 {
-	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-	free(buffer);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fl);
 	exit(99);
 }
 /**
