@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 		err97();
 	op_f = open(argv[1], O_RDONLY);
-	op_t = open(argv[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
+	op_t = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	buffer = malloc(1024);
 	if (buffer == NULL)
 		err99(argv[2]);
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 			err99(argv[2]);
 		}
 		rd = read(op_f, buffer, 1024);
-		op_t = open(argv[2], O_RDWR | O_APPEND);
+		op_t = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	cl = close(op_f);
 	if (cl == -1)
