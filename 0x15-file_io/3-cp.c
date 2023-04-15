@@ -1,5 +1,5 @@
 #include "main.h"
-void cl_file(fl);
+void cl_file(int fl);
 /**
  * main - copy the content of a file to another file
  * @argc: file to copy content from
@@ -8,7 +8,7 @@ void cl_file(fl);
  */
 int main(int argc, char *argv[])
 {
-	int op_f, op_t, rd, wr, cl_f, cl_t;
+	int op_f, op_t, rd, wr;
 	char *buffer = malloc(1024);
 
 	if (argc != 3)
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	}
 	if (buffer == NULL)
 	{
-		dprintf(s, "Error: Can't write to %s\n", argv[2]);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	op_f = open(argv[1], O_RDONLY);
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
  * @fl: file from or to
  * Return: nothing
  */
-void cl_file(fl)
+void cl_file(int fl)
 {
 	int cl;
 
