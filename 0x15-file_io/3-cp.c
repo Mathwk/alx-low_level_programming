@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
 }
 /**
  * err97 - error code 97
- * @fl: file name
  */
 void err97(void)
 {
