@@ -58,7 +58,7 @@ void cl_file(int fl)
 	cl = close(fl);
 	if (cl == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fl);
+		dprintf(STDERR_FILENO, " Error: Can't close fd %d\n", fl);
 		exit(100);
 	}
 }
