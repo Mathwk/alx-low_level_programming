@@ -2,7 +2,7 @@
 void err97(void);
 void err98(char *fl);
 void err99(char *fl);
-void cl_file(int fl);
+void err100(int fl);
 /**
  * main - copy the content of a file to another file
  * @argc: file to copy content from
@@ -11,7 +11,7 @@ void cl_file(int fl);
  */
 int main(int argc, char *argv[])
 {
-	int op_f, op_t, rd, wr;
+	int op_f, op_t, rd, wr, cl;
 	char *buffer = malloc(1024);
 
 	if (argc != 3)
@@ -31,8 +31,12 @@ int main(int argc, char *argv[])
 		rd = read(op_f, buffer, 1024);
 		op_t = open(argv[2], O_RDWR | O_APPEND);
 	}
-	cl_file(op_f);
-	cl_file(op_t);
+	cl = close(op_f);
+	if (cl == -1)
+		err100(op_f);
+	cl = close(op_t);
+	if (cl == -1)
+		err100(op_t);
 	return (0);
 }
 /**
@@ -62,18 +66,12 @@ void err99(char *fl)
 	exit(99);
 }
 /**
- * cl_file - closes the file
+ * err100 - error code 100
  * @fl: file from or to
  * Return: nothing
  */
-void cl_file(int fl)
+void err100(int fl)
 {
-	int cl;
-
-	cl = close(fl);
-	if (cl == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fl);
-		exit(100);
-	}
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fl);
+	exit(100);
 }
