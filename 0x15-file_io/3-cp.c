@@ -12,14 +12,15 @@ void err100(int fl);
 int main(int argc, char *argv[])
 {
 	int op_f, op_t, rd, wr, cl;
-	char *buffer = malloc(1024);
+	char *buffer;
 
 	if (argc != 3)
 		err97();
-	if (buffer == NULL)
-		err99(argv[2]);
 	op_f = open(argv[1], O_RDONLY);
 	op_t = open(argv[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
+	buffer = malloc(1024);
+	if (buffer == NULL)
+		err99(argv[2]);
 	rd = read(op_f, buffer, 1024);
 	while (rd > 0)
 	{
@@ -39,16 +40,10 @@ int main(int argc, char *argv[])
 	}
 	cl = close(op_f);
 	if (cl == -1)
-	{
-		free(buffer);
 		err100(op_f);
-	}
 	cl = close(op_t);
 	if (cl == -1)
-	{
-		free(buffer);
 		err100(op_t);
-	}
 	return (0);
 }
 /**
