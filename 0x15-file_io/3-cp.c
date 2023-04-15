@@ -24,19 +24,31 @@ int main(int argc, char *argv[])
 	while (rd > 0)
 	{
 		if (op_f == -1 || rd == -1)
+		{
 			err98(argv[1]);
+			free(buffer);
+		}
 		wr = write(op_t, buffer, rd);
 		if (op_t == -1 || wr == -1)
+		{
 			err99(argv[2]);
+			free(buffer);
+		}
 		rd = read(op_f, buffer, 1024);
 		op_t = open(argv[2], O_RDWR | O_APPEND);
 	}
 	cl = close(op_f);
 	if (cl == -1)
+	{
 		err100(op_f);
+		free(buffer);
+	}
 	cl = close(op_t);
 	if (cl == -1)
+	{
 		err100(op_t);
+		free(buffer);
+	}
 	return (0);
 }
 /**
