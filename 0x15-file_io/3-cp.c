@@ -22,8 +22,7 @@ int main(int argc, char *argv[])
 	if (buffer == NULL)
 		err99(argv[2]);
 	rd = read(op_f, buffer, 1024);
-	while (rd > 0)
-	{
+	do {
 		if (op_f == -1 || rd == -1)
 		{
 			free(buffer);
@@ -37,7 +36,7 @@ int main(int argc, char *argv[])
 		}
 		rd = read(op_f, buffer, 1024);
 		op_t = open(argv[2], O_WRONLY | O_APPEND);
-	}
+	} while (rd > 0);
 	cl = close(op_f);
 	if (cl == -1)
 		err100(op_f);
