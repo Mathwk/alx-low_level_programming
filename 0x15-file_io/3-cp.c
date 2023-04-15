@@ -33,14 +33,14 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		wr = write(op_t, buffer, rd);
-		rd = read(op_f, buffer, 1024);
-		op_t = open(argv[2], O_RDWR | O_APPEND);
 		if (op_t == -1 || wr == -1)
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
+		rd = read(op_f, buffer, 1024);
+		op_t = open(argv[2], O_RDWR | O_APPEND);
 	}
 	cl_file(op_f);
 	cl_file(op_t);
