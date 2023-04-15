@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		wr = write(op_t, buffer, rd);
 		if (op_t == -1 || wr == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, " Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
@@ -58,7 +58,7 @@ void cl_file(int fl)
 	cl = close(fl);
 	if (cl == -1)
 	{
-		dprintf(STDERR_FILENO, " Error: Can't close fd %d\n", fl);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fl);
 		exit(100);
 	}
 }
