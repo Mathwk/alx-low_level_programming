@@ -25,14 +25,14 @@ int main(int argc, char *argv[])
 	{
 		if (op_f == -1 || rd == -1)
 		{
-			err98(argv[1]);
 			free(buffer);
+			err98(argv[1]);
 		}
 		wr = write(op_t, buffer, rd);
 		if (op_t == -1 || wr == -1)
 		{
-			err99(argv[2]);
 			free(buffer);
+			err99(argv[2]);
 		}
 		rd = read(op_f, buffer, 1024);
 		op_t = open(argv[2], O_RDWR | O_APPEND);
@@ -40,14 +40,14 @@ int main(int argc, char *argv[])
 	cl = close(op_f);
 	if (cl == -1)
 	{
-		err100(op_f);
 		free(buffer);
+		err100(op_f);
 	}
 	cl = close(op_t);
 	if (cl == -1)
 	{
-		err100(op_t);
 		free(buffer);
+		err100(op_t);
 	}
 	return (0);
 }
