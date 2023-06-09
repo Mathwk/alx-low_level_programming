@@ -1,11 +1,10 @@
 #include "hash_tables.h"
 /**
 * hash_table_set - function
-* @ht: table to add/update key/value to
-* @key: key. Cannot be empty string
-* @value: value associated with key
+* @ht: table to add to
+* @key: key
+* @value: value
 *
-* Description: function to add an element to a hash table.
 * Return: 1 Success, 0 Fail
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -18,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = (hash_djb2((const unsigned char *)key) % (ht->size));
 	if (key == NULL || value == NULL || (strcmp(key, "") == 0))
 		return (0);
-	if (ht->array[index] == NULL) /*slot is empty, put node here*/
+	if (ht->array[index] == NULL)
 	{newNode = malloc(sizeof(hash_node_t));
 		if (newNode == NULL)
 			return (0);
@@ -29,14 +28,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (1);
 	}
 	tempNode = ht->array[index];
-	while (tempNode) /*while "head" is not NULL*/
+	while (tempNode)
 	{
 		if (strcmp(key, tempNode->key) == 0)
 		{free(tempNode->value);
 			tempNode->value = (strdup(value));
 			return (1);
 		}
-		tempNode = tempNode->next;/*traversing*/
+		tempNode = tempNode->next;
 	}
 	tempNode = ht->array[index];
 	while (tempNode)
